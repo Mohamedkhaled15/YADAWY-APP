@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "yadawy_app_flutter",
+            "cwd": "${workspaceFolder}/yadawy_app_flutter",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart"
+        },
+        {
+            "name": "yadawy_app_server",
+            "cwd": "${workspaceFolder}/yadawy_app_server",
+            "request": "launch",
+            "type": "dart",
+            "preLaunchTask": "docker_compose_up",
+            "program": "bin/main.dart",
+            "env": {
+                "SERVERPOD_PASSWORD_database": "-MLFomczgIz-Iqqwb_9gbNCL2UXEnzuy"
+            },
+            "args": [
+                "--apply-migrations"
+            ]
+        }
+    ],
+    "compounds": [
+        {
+            "name": "yadawy_app (full stack)",
+            "configurations": [
+                "yadawy_app_server",
+                "yadawy_app_flutter"
+            ],
+            "presentation": {
+                "order": 1
+            }
+        }
+    ]
+}
