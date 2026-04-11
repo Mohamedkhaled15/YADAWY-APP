@@ -35,25 +35,49 @@ class _SignInScreenState extends State<SignInScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return _isSignedIn
-        ? widget.child
-        : Center(
-            child: SignInWidget(
-              client: client,
-              onAuthenticated: () {
-                context.showSnackBar(
-                  message: 'User authenticated.',
-                  backgroundColor: Colors.green,
-                );
-              },
-              onError: (error) {
-                context.showSnackBar(
-                  message: 'Authentication failed: $error',
-                  backgroundColor: Colors.red,
-                );
-              },
-            ),
-          );
+    if (_isSignedIn) {
+      return widget.child;
+    }
+
+    return Scaffold(
+      body: Center(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.auto_awesome, size: 64, color: Colors.blue),
+              const SizedBox(height: 16),
+              Text(
+                'Welcome to Yadawy',
+                style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
+              ),
+              const SizedBox(height: 8),
+              const Text('Please sign in to continue'),
+              const SizedBox(height: 32),
+              SignInWidget(
+                client: client,
+                onAuthenticated: () {
+                  context.showSnackBar(
+                    message: 'User authenticated.',
+                    backgroundColor: Colors.green,
+                  );
+                },
+                onError: (error) {
+                  context.showSnackBar(
+                    message: 'Authentication failed: $error',
+                    backgroundColor: Colors.red,
+                  );
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
 

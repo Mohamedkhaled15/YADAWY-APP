@@ -961,9 +961,44 @@
       "dependencies": []
     },
     {
+      "name": "openai_dart",
+      "version": "1.4.0",
+      "dependencies": [
+        "http",
+        "logging",
+        "meta",
+        "web_socket"
+      ]
+    },
+    {
+      "name": "ollama_dart",
+      "version": "1.4.1",
+      "dependencies": [
+        "http",
+        "logging",
+        "meta"
+      ]
+    },
+    {
+      "name": "mistralai_dart",
+      "version": "1.3.0",
+      "dependencies": [
+        "http",
+        "logging",
+        "meta"
+      ]
+    },
+    {
       "name": "mime",
       "version": "2.0.0",
       "dependencies": []
+    },
+    {
+      "name": "mcp_dart",
+      "version": "2.1.0",
+      "dependencies": [
+        "http"
+      ]
     },
     {
       "name": "logging",
@@ -999,6 +1034,15 @@
         "meta",
         "mime",
         "uuid"
+      ]
+    },
+    {
+      "name": "anthropic_sdk_dart",
+      "version": "1.4.2",
+      "dependencies": [
+        "http",
+        "logging",
+        "meta"
       ]
     },
     {
@@ -1412,6 +1456,40 @@
       ]
     },
     {
+      "name": "csslib",
+      "version": "1.0.2",
+      "dependencies": [
+        "source_span"
+      ]
+    },
+    {
+      "name": "json_schema_builder",
+      "version": "0.1.3",
+      "dependencies": [
+        "args",
+        "characters",
+        "collection",
+        "decimal",
+        "email_validator",
+        "http",
+        "intl",
+        "meta"
+      ]
+    },
+    {
+      "name": "genai_primitives",
+      "version": "0.2.3",
+      "dependencies": [
+        "collection",
+        "cross_file",
+        "json_schema_builder",
+        "logging",
+        "meta",
+        "mime",
+        "path"
+      ]
+    },
+    {
       "name": "path_provider_windows",
       "version": "2.3.0",
       "dependencies": [
@@ -1566,6 +1644,22 @@
       "dependencies": []
     },
     {
+      "name": "decimal",
+      "version": "3.2.4",
+      "dependencies": [
+        "intl",
+        "rational"
+      ]
+    },
+    {
+      "name": "cross_file",
+      "version": "0.3.5+2",
+      "dependencies": [
+        "meta",
+        "web"
+      ]
+    },
+    {
       "name": "platform",
       "version": "3.1.6",
       "dependencies": []
@@ -1609,6 +1703,11 @@
       ]
     },
     {
+      "name": "rational",
+      "version": "2.2.3",
+      "dependencies": []
+    },
+    {
       "name": "native_toolchain_c",
       "version": "0.17.6",
       "dependencies": [
@@ -1638,105 +1737,6 @@
       "dependencies": [
         "collection",
         "hooks"
-      ]
-    },
-    {
-      "name": "mcp_dart",
-      "version": "2.1.0",
-      "dependencies": [
-        "http"
-      ]
-    },
-    {
-      "name": "csslib",
-      "version": "1.0.2",
-      "dependencies": [
-        "source_span"
-      ]
-    },
-    {
-      "name": "mistralai_dart",
-      "version": "1.3.0",
-      "dependencies": [
-        "http",
-        "logging",
-        "meta"
-      ]
-    },
-    {
-      "name": "openai_dart",
-      "version": "1.4.0",
-      "dependencies": [
-        "http",
-        "logging",
-        "meta",
-        "web_socket"
-      ]
-    },
-    {
-      "name": "json_schema_builder",
-      "version": "0.1.3",
-      "dependencies": [
-        "args",
-        "characters",
-        "collection",
-        "decimal",
-        "email_validator",
-        "http",
-        "intl",
-        "meta"
-      ]
-    },
-    {
-      "name": "decimal",
-      "version": "3.2.4",
-      "dependencies": [
-        "intl",
-        "rational"
-      ]
-    },
-    {
-      "name": "genai_primitives",
-      "version": "0.2.3",
-      "dependencies": [
-        "collection",
-        "cross_file",
-        "json_schema_builder",
-        "logging",
-        "meta",
-        "mime",
-        "path"
-      ]
-    },
-    {
-      "name": "cross_file",
-      "version": "0.3.5+2",
-      "dependencies": [
-        "meta",
-        "web"
-      ]
-    },
-    {
-      "name": "ollama_dart",
-      "version": "1.4.1",
-      "dependencies": [
-        "http",
-        "logging",
-        "meta"
-      ]
-    },
-    {
-      "name": "rational",
-      "version": "2.2.3",
-      "dependencies": []
-    },
-    {
-      "name": "anthropic_sdk_dart",
-      "version": "1.4.2",
-      "dependencies": [
-        "http",
-        "logging",
-        "meta"
       ]
     }
   ],

@@ -6,7 +6,7 @@ import 'package:serverpod/serverpod.dart';
 /// generateRecipe method.
 class RecipeEndpoint extends Endpoint {
   /// Pass in a string containing the ingredients and get a recipe back.
-  Future<String> generateRecipe(Session session, String ingredients) async {
+  Future<String> generateRecipe(Session session, String question) async {
     // Serverpod automatically loads your passwords.yaml file and makes the
     // passwords available in the session.passwords map.
     final geminiApiKey = session.passwords['geminiApiKey'];
@@ -22,11 +22,11 @@ class RecipeEndpoint extends Endpoint {
 
     // A prompt to generate a recipe, the user will provide a free text input
     // with the ingredients.
-    final prompt =
-        'Generate a recipe using the following ingredients: $ingredients. '
-        'Always put the title of the recipe in the first line, followed by the '
-        'instructions. The recipe should be easy to follow and include all '
-        'necessary steps.';
+    final prompt = question;
+    // 'Generate a recipe using the following ingredients: $ingredients. '
+    // 'Always put the title of the recipe in the first line, followed by the '
+    // 'instructions. The recipe should be easy to follow and include all '
+    // 'necessary steps and replay in arabic lang';
 
     final response = await agent.send(prompt);
 
